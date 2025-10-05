@@ -5,6 +5,7 @@ import PostFeeds from './components/PostFeeds/PostFeeds';
 import CreatePostPage from './pages/CreatePostPage';
 import HomePage from './pages/HomePage';
 import NotificationsPage from './pages/NotificationsPage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/post-feed" element={<PostFeeds />} />
           <Route path="/create-post" element={<CreatePostPage />} />
           <Route path="/notifications" element={<NotificationsPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Route>
       </Routes>
     </>
