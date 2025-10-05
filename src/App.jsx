@@ -3,6 +3,7 @@ import './App.css';
 import Root from './Root/Root';
 import PostFeeds from './components/PostFeeds/PostFeeds';
 import CreatePostPage from './pages/CreatePostPage';
+import EditProfilePage from './pages/EditProfilePage';
 import HomePage from './pages/HomePage';
 import NotificationsPage from './pages/NotificationsPage';
 import PostDetailsPage from './pages/PostDetailsPage';
@@ -19,6 +20,7 @@ function App() {
           <Route path="/notifications" element={<NotificationsPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/post-details" element={<PostDetailsPage />} />
+          <Route path="/edit-profile" element={<EditProfilePage />} />
         </Route>
       </Routes>
     </>

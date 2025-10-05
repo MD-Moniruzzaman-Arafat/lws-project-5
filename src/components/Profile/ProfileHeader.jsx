@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import user from '../../assets/users/user-1.png';
 import ProfileBio from './ProfileBio';
 
@@ -25,12 +26,12 @@ export default function ProfileHeader() {
             </h2>
           </div>
           <div className="flex space-x-2">
-            <a
-              href="./edit-profile.html"
+            <Link
+              to="/edit-profile"
               className="bg-gray-100 px-4 py-1.5 rounded-md text-sm font-medium"
             >
               Edit profile
-            </a>
+            </Link>
           </div>
 
           {/* <!-- Stats --> */}
