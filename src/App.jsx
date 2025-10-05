@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import NotificationsPage from './pages/NotificationsPage';
 import PostDetailsPage from './pages/PostDetailsPage';
 import ProfilePage from './pages/ProfilePage';
+import RegisterPage from './pages/RegisterPage';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
           <Route path="/post-details" element={<PostDetailsPage />} />
           <Route path="/edit-profile" element={<EditProfilePage />} />
         </Route>
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<RegisterPage />} />
       </Routes>
     </>
   );
