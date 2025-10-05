@@ -5,6 +5,7 @@ import PostFeeds from './components/PostFeeds/PostFeeds';
 import CreatePostPage from './pages/CreatePostPage';
 import EditProfilePage from './pages/EditProfilePage';
 import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
 import NotificationsPage from './pages/NotificationsPage';
 import PostDetailsPage from './pages/PostDetailsPage';
 import ProfilePage from './pages/ProfilePage';
@@ -24,7 +25,7 @@ function App() {
           <Route path="/edit-profile" element={<EditProfilePage />} />
         </Route>
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </>
   );
