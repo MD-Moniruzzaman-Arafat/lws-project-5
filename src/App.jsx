@@ -4,6 +4,7 @@ import Root from './Root/Root';
 import PostFeeds from './components/PostFeeds/PostFeeds';
 import CreatePostPage from './pages/CreatePostPage';
 import HomePage from './pages/HomePage';
+import NotificationsPage from './pages/NotificationsPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/post-feed" element={<PostFeeds />} />
           <Route path="/create-post" element={<CreatePostPage />} />
+          <Route path="/notifications" element={<NotificationsPage />} />
         </Route>
       </Routes>
     </>
