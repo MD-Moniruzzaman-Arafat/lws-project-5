@@ -11,7 +11,7 @@ import AddComment from './AddComment';
 export default function PostCard() {
   return (
     <>
-      <article className="border-b pb-4 mb-4 max-w-[560px] mx-auto border rounded-md">
+      <article className="border-b pb-4 mb-4 max-w-[560px] mx-auto border-gray-200 border rounded-md">
         {/* <!-- Post Header --> */}
         <div className="flex items-center p-3">
           <a

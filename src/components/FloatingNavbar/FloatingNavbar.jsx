@@ -9,7 +9,7 @@ import ProfileButton from './ProfileButton';
 export default function FloatingNavbar() {
   return (
     <>
-      <aside className="hidden floating-navbar bg-white  border px-6 py-2 md:flex flex-col">
+      <aside className="hidden floating-navbar bg-white  border border-gray-200 px-6 py-2 md:flex flex-col">
         <a
           href="./index.html"
           className="flex gap-2 items-center font-medium py-4 mb-8"
