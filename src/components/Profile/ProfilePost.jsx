@@ -1,3 +1,11 @@
+import { Link } from 'react-router';
+import postImageOne from '../../assets/articles/post-1.jpg';
+import postImageTwo from '../../assets/articles/post-2.jpg';
+import postImageThree from '../../assets/articles/post-3.jpg';
+import postImageFour from '../../assets/articles/post-4.jpg';
+import postImageFive from '../../assets/articles/post-5.jpg';
+import postImageSix from '../../assets/articles/post-6.jpg';
+
 export default function ProfilePost() {
   return (
     <>
@@ -6,21 +14,21 @@ export default function ProfilePost() {
         {/* <!-- Photo Grid --> */}
         <div className="grid grid-cols-3 gap-1">
           {/* <!-- Grid Item 1 --> */}
-          <a href="./post-details.html">
+          <Link to="/post-details">
             <div className="relative">
               <img
-                src="./assets/articles/post-1.jpg"
+                src={postImageOne}
                 alt="Post"
                 className="w-full grid-image"
               />
             </div>
-          </a>
+          </Link>
 
           {/* <!-- Grid Item 2 --> */}
           <a href="./post-details.html">
             <div className="relative">
               <img
-                src="./assets/articles/post-2.jpg"
+                src={postImageTwo}
                 alt="Post"
                 className="w-full grid-image"
               />
@@ -31,7 +39,7 @@ export default function ProfilePost() {
           <a href="./post-details.html">
             <div className="relative">
               <img
-                src="./assets/articles/post-3.jpg"
+                src={postImageThree}
                 alt="Post"
                 className="w-full grid-image"
               />
@@ -42,7 +50,7 @@ export default function ProfilePost() {
           <a href="./post-details.html">
             <div className="relative">
               <img
-                src="./assets/articles/post-4.jpg"
+                src={postImageFour}
                 alt="Post"
                 className="w-full grid-image"
               />
@@ -53,7 +61,7 @@ export default function ProfilePost() {
           <a href="./post-details.html">
             <div className="relative">
               <img
-                src="./assets/articles/post-5.jpg"
+                src={postImageFive}
                 alt="Post"
                 className="w-full grid-image"
               />
@@ -64,7 +72,7 @@ export default function ProfilePost() {
           <a href="./post-details.html">
             <div className="relative">
               <img
-                src="./assets/articles/post-6.jpg"
+                src={postImageSix}
                 alt="Post"
                 className="w-full grid-image"
               />
