@@ -1,5 +1,6 @@
 import { Link } from 'react-router';
 import logo from '../assets/logo-2.svg';
+import RegisterForm from '../components/RegisterForm/RegisterForm';
 
 export default function RegisterPage() {
   return (
@@ -18,74 +19,7 @@ export default function RegisterPage() {
               Sign up to see photos and videos from your friends.
             </h2>
 
-            <form>
-              {/* <!-- Email/Phone Field --> */}
-              <div className="mb-2">
-                <div className="relative">
-                  <input
-                    type="text"
-                    className="form-input"
-                    placeholder="Email"
-                    aria-label="Email"
-                  />
-                </div>
-              </div>
-
-              {/* <!-- Full Name Field --> */}
-              <div className="mb-2">
-                <div className="relative">
-                  <input
-                    type="text"
-                    className="form-input"
-                    placeholder="Full Name"
-                    aria-label="Full Name"
-                  />
-                </div>
-              </div>
-
-              {/* <!-- Password Field --> */}
-              <div className="mb-3">
-                <div className="relative">
-                  <input
-                    type="password"
-                    className="form-input"
-                    placeholder="Password"
-                    aria-label="Password"
-                  />
-                  <button
-                    type="button"
-                    className="absolute inset-y-0 right-0 flex items-center px-3 text-gray-500 text-xs"
-                  >
-                    Show
-                  </button>
-                </div>
-              </div>
-
-              {/* <!-- Confirm Password Field --> */}
-              <div className="mb-3">
-                <div className="relative">
-                  <input
-                    type="password"
-                    className="form-input"
-                    placeholder="Confirm Password"
-                    aria-label="Confirm Password"
-                  />
-                  <button
-                    type="button"
-                    className="absolute inset-y-0 right-0 flex items-center px-3 text-gray-500 text-xs"
-                  >
-                    Show
-                  </button>
-                </div>
-              </div>
-
-              {/* <!-- Sign Up Button --> */}
-              <div className="mb-2">
-                <button type="submit" className="signup-button">
-                  Sign up
-                </button>
-              </div>
-            </form>
+            <RegisterForm />
           </div>
 
           {/* <!-- Login Box --> */}

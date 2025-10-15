@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import logo from '../assets/logo.svg';
 
 export default function LoginPage() {
   return (
@@ -7,11 +8,7 @@ export default function LoginPage() {
         <div className="login-container rounded-md">
           {/* <!-- PhotoBooth Logo --> */}
           <div className="flex justify-center mb-8">
-            <img
-              src="./assets/logo.svg"
-              alt="PhotoBooth"
-              className="h-[51px]"
-            />
+            <img src={logo} alt="PhotoBooth" className="h-[51px]" />
           </div>
 
           {/* <!-- Login Form --> */}
