@@ -1,10 +1,12 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
+import useAuth from '../../hooks/useAuth';
 import InputField from '../common/InputField';
 import PasswordInputField from '../common/PasswordInputField';
 
 export default function LoginForm() {
+  const { setAuth } = useAuth();
   const {
     register,
     formState: { errors },
@@ -18,9 +20,9 @@ export default function LoginForm() {
     });
     if (response.status === 200) {
       navigate('/');
+      const result = await response.data;
+      setAuth(result);
     }
-    const result = await response.data;
-    console.log(result);
   };
   return (
     <>
