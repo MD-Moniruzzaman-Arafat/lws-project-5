@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
-import useAuth from '../../hooks/useAuth';
+import { useAuth } from '../../hooks/useAuth';
 import InputField from '../common/InputField';
 import PasswordInputField from '../common/PasswordInputField';
 
@@ -14,14 +14,22 @@ export default function LoginForm() {
   } = useForm();
   const navigate = useNavigate();
   const onSubmit = async (data) => {
-    const response = await axios.post('http://localhost:3000/api/auth/login', {
-      email: data.email,
-      password: data.password,
-    });
-    if (response.status === 200) {
-      navigate('/');
-      const result = await response.data;
-      setAuth(result);
+    try {
+      const response = await axios.post(
+        'http://localhost:3000/api/auth/login',
+        {
+          email: data.email,
+          password: data.password,
+        }
+      );
+      if (response.status === 200) {
+        console.log('Login successful', response.data);
+        navigate('/profile');
+        const result = await response.data;
+        setAuth(result);
+      }
+    } catch (error) {
+      console.error('Login failed:', error.message);
     }
   };
   return (

@@ -1,15 +1,15 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 import { api } from '../api';
-import useAuth from './useAuth';
+import { useAuth } from './useAuth';
 
-export default function useAxios() {
+export function useAxios() {
   const { auth, setAuth } = useAuth();
   useEffect(() => {
     // 🔐 Request Interceptor → প্রতিটি request এর সাথে token পাঠাবে
     const requestInterceptors = api.interceptors.request.use(
       (config) => {
-        const accessToken = auth.accessToken;
+        const accessToken = auth?.accessToken;
         if (accessToken) {
           config.headers.Authorization = `Bearer ${accessToken}`;
         }
@@ -58,5 +58,5 @@ export default function useAxios() {
       api.interceptors.response.eject(responseInterceptors);
     };
   }, [auth, setAuth]);
-  return api;
+  return { api };
 }

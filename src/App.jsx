@@ -10,19 +10,22 @@ import NotificationsPage from './pages/NotificationsPage';
 import PostDetailsPage from './pages/PostDetailsPage';
 import ProfilePage from './pages/ProfilePage';
 import RegisterPage from './pages/RegisterPage';
+import PrivateRoute from './routes/PrivateRoute';
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Root />}>
-          <Route index element={<HomePage />} />
-          <Route path="/post-feed" element={<PostFeeds />} />
-          <Route path="/create-post" element={<CreatePostPage />} />
-          <Route path="/notifications" element={<NotificationsPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/post-details" element={<PostDetailsPage />} />
-          <Route path="/edit-profile" element={<EditProfilePage />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/" element={<Root />}>
+            <Route index element={<HomePage />} />
+            <Route path="/post-feed" element={<PostFeeds />} />
+            <Route path="/create-post" element={<CreatePostPage />} />
+            <Route path="/notifications" element={<NotificationsPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/post-details" element={<PostDetailsPage />} />
+            <Route path="/edit-profile" element={<EditProfilePage />} />
+          </Route>
         </Route>
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
