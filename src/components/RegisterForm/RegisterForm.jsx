@@ -1,12 +1,10 @@
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router';
-import useAuth from '../../hooks/useAuth';
 import InputField from '../common/InputField';
 import PasswordInputField from '../common/PasswordInputField';
 
 export default function RegisterForm() {
-  const { setAuth } = useAuth();
   const {
     register,
     formState: { errors },
@@ -16,15 +14,22 @@ export default function RegisterForm() {
   const navigate = useNavigate();
   const password = watch('password');
   const onSubmit = async (data) => {
-    const response = await axios.post('http://localhost:3000/api/auth/signup', {
-      email: data.email,
-      name: data['full-name'],
-      password: data.password,
-    });
-    if (response.status === 201) {
-      navigate('/profile');
-      const result = await response.data;
-      setAuth(result);
+    console.log(data);
+    try {
+      const response = await axios.post(
+        'http://localhost:3000/api/auth/signup',
+        {
+          name: data['full-name'],
+          email: data.email,
+          password: data.password,
+        }
+      );
+      if (response.status === 201) {
+        console.log('Registration successful', response.data);
+        navigate('/login');
+      }
+    } catch (error) {
+      console.error('Registration failed:', error.message);
     }
   };
   return (
